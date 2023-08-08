@@ -27,7 +27,7 @@ export default function Card(props: CardProps) {
         </p>
         <Button
           singleLine={true}
-          text={"View Project"}
+          text={"View"}
           contStyles={styles.viewProjectButton}
         />
       </div>

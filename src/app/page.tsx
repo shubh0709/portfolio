@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import selfImg from "../../public/images/selfImg.png";
 import yellowBg from "../../public/images/yellow-bg.png";
+import footerImg from "../../public/images/footerImg.png";
 import Button from "./button";
 import Card from "./card";
 import gullakIcon from "../../public/svgs/gullakLogo.svg";
@@ -19,7 +20,7 @@ export default function Home() {
               products. Avidly looking for opportunities that strive to build
               for the customers by pursuing engineering excellence
             </p>
-            <Button text={"Projects"} />
+            <Button text={"Resume"} />
             <Button text={"LinkedIn"} contStyles={styles.linkedInCont} />
           </div>
           <Image
@@ -34,6 +35,13 @@ export default function Home() {
           <Card imgOnLeft={false} image={gullakIcon} />
           <div className={styles.dummyHeight} />
           <Card imgOnLeft={true} image={gullakIcon} />
+        </div>
+        <div className={styles.footerContainer}>
+          <Image
+            src={footerImg}
+            alt={"footer image"}
+            className={styles.footerImg}
+          />
         </div>
       </div>
     </main>
