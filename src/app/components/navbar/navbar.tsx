@@ -1,7 +1,7 @@
 "use client";
 import styles from "./page.module.css";
-import menuIcon from "../../public/svgs/menuIcon.svg";
-import close from "../../public/svgs/close.svg";
+import menuIcon from "../../../../public/svgs/menuIcon.svg";
+import close from "../../../../public/svgs/close.svg";
 import Image from "next/image";
 import { useState } from "react";
 

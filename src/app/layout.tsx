@@ -1,6 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import Navbar from "./navbar";
+import Navbar from "./components/navbar/navbar";
 import { Inter, Roboto, Poppins, Raleway, Nunito } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });

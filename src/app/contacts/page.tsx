@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import selfImg from "../../../public/images/selfImg.png";
 import yellowBg from "../../../public/images/yellow-bg.png";
-import Button from "../button";
+import Button from "../components/button/button";
 
 export default function About() {
   return (

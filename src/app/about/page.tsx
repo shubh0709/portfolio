@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import selfImg from "../../../public/images/selfImg.png";
 import yellowBg from "../../../public/images/yellow-bg.png";
-import Button from "../button";
+import Button from "../components/button/button";
 
 export default function About() {
   return (
@@ -16,8 +16,10 @@ export default function About() {
               products. Avidly looking for opportunities that strive to build
               for the customers by pursuing engineering excellence
             </p>
-            <Button text={"Resume"} />
-            <Button text={"LinkedIn"} contStyles={styles.linkedInCont} />
+            <div className={styles.buttonContainer}>
+              <Button text={"Resume"} />
+              <Button text={"LinkedIn"} contStyles={styles.linkedInCont} />
+            </div>
           </div>
           <Image
             src={yellowBg}
