@@ -9,6 +9,7 @@ interface CardProps {
   imgBgColor: string;
   workText: string;
   textStyle?: any;
+  onPress: () => void;
 }
 
 export default function Card(props: CardProps) {
@@ -40,6 +41,7 @@ export default function Card(props: CardProps) {
           text={"View"}
           contStyles={styles.viewProjectButton}
           textStyles={styles.viewProjectButtonText}
+          onPress={props.onPress}
         />
       </div>
       {!props.imgOnLeft && (

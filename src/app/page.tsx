@@ -11,8 +11,16 @@ import gullakIcon from "../../public/svgs/gullakLogo.svg";
 import gullakText from "../../public/svgs/gullak-text.svg";
 import factsetText from "../../public/svgs/factset-text.svg";
 import translearnText from "../../public/svgs/translearn-text.svg";
+import emailIcon from "../../public/svgs/email-icon.svg";
+import linkedinIcon from "../../public/svgs/linkedin-icon.svg";
+import twitterIcon from "../../public/svgs/twitter-icon.svg";
+import { openInNewTab } from "./utils/util";
 
 export default function Home() {
+  const resumeLink =
+    "https://drive.google.com/file/d/1dx0PBYMU3irEHMComs72dWBGY7JuvJbP/view?usp=drive_link";
+  const linkedinLink = "https://www.linkedin.com/in/shubhamsingh0109/";
+  const twitterLink = "https://twitter.com/imSsingh19";
   return (
     <main className={styles.main}>
       <div className={styles.description}>
@@ -26,17 +34,23 @@ export default function Home() {
               for the customers by pursuing engineering excellence
             </p>
             <div className={styles.buttonContainer}>
-              <Button text={"Resume"} />
-              <Button text={"LinkedIn"} contStyles={styles.linkedInCont} />
+              <Button
+                text={"Resume"}
+                onPress={() => openInNewTab(resumeLink)}
+              />
+              {/* <Button
+                text={"LinkedIn"}
+                onPress={() => openInNewTab(linkedinLink)}
+                contStyles={styles.linkedInCont}
+              /> */}
             </div>
           </div>
-
           <div className={styles.imgWrapper}>
             <Image
               src={combinedImg}
               alt={"portrait image"}
               className={styles.yellowBg}
-              fill={true}
+              // fill={true}
             />
           </div>
         </div>
@@ -49,6 +63,7 @@ export default function Home() {
             workText={
               "Gullak is an Indian B2C startup, it's a platform to buy/sell digital gold \nI worked on developing its mobile app, currently having 1M+ downloads"
             }
+            onPress={() => openInNewTab("https://gullak.money/")}
           />
           <div className={styles.dummyHeight} />
           <Card
@@ -59,6 +74,7 @@ export default function Home() {
             workText={
               "Factset is a US based firm providing financial data about companies.\nI worked here as a Fullstack engineer."
             }
+            onPress={() => openInNewTab("https://www.factset.com/")}
           />
           <div className={styles.dummyHeight} />
           <Card
@@ -70,15 +86,45 @@ export default function Home() {
               "Teanslearn is a service built to cater students. It revolves around  summarizing text, generating PPT's, automatic question-answering based on the uploaded content"
             }
             textStyle={styles.translearnImgTextStyle}
+            onPress={() => openInNewTab("https://translearn.vercel.app/")}
           />
         </div>
-        <div className={styles.footerContainer}>
-          <Image
-            src={footerImg}
-            alt={"footer image"}
-            className={styles.footerImg}
-          />
+        <div className={styles.contactFooter}>
+          <div className={styles.contactIcons}>
+            <Image
+              src={linkedinIcon}
+              alt={"linkedin Icon"}
+              className={styles.linkedInIcon}
+              onClick={() => openInNewTab(linkedinLink)}
+            />
+            <Image
+              src={twitterIcon}
+              alt={"twiiter Icon"}
+              className={styles.twitterIcon}
+              onClick={() => openInNewTab(twitterLink)}
+            />
+            {/* <Image
+              src={emailIcon}
+              alt={"email Icon"}
+              className={styles.emailIcon}
+            /> */}
+          </div>
+          <span className={styles.contactName}>
+            <Image
+              src={emailIcon}
+              alt={"email Icon"}
+              className={styles.emailIcon}
+            />
+            <div className={styles.nameStyle}>singhshubh0709@gmail.com 😉</div>
+          </span>
         </div>
+      </div>
+      <div className={styles.footerContainer}>
+        <Image
+          src={footerImg}
+          alt={"footer image"}
+          className={styles.footerImg}
+        />
       </div>
     </main>
   );

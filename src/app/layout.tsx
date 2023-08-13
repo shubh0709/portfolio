@@ -23,10 +23,8 @@ export default function RootLayout({
       <body
         className={`${inter.className} ${roboto.className} ${raleway.className} ${nunito.className}`}
       >
-        <div className="bodyContainer">
-          <Navbar />
-          {children}
-        </div>
+        {/* <Navbar /> */}
+        <div className="bodyContainer">{children}</div>
       </body>
     </html>
   );

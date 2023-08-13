@@ -5,11 +5,15 @@ interface ButtonProps {
   textStyles?: any;
   contStyles?: any;
   singleLine?: boolean;
+  onPress: () => void;
 }
 
 export default function Button(props: ButtonProps) {
   return (
-    <span className={`${styles.button} ${props?.contStyles}`}>
+    <button
+      onClick={props.onPress}
+      className={`${styles.button} ${props?.contStyles}`}
+    >
       <span
         className={`${styles.buttonText} ${props?.textStyles} ${
           props?.singleLine && styles.inlinePara
@@ -17,6 +21,6 @@ export default function Button(props: ButtonProps) {
       >
         {props.text}
       </span>
-    </span>
+    </button>
   );
 }

@@ -1,0 +1,170 @@
+.main {
+  background-color: #e8ecf4;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-self: center;
+}
+
+.description {
+  margin-top: 5rem;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  font-size: 0.85rem;
+  z-index: 2;
+  flex: 1;
+  align-self: center;
+  padding: 0 4rem;
+}
+
+.mainHeader {
+  width: 100%;
+  display: flex;
+}
+
+.textContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.topTitle {
+  color: #fdc435;
+  font-family: Nunito;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: Raleway;
+  font-size: 4rem;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 120%;
+}
+
+.subtitle {
+  color: #828282;
+  font-family: Nunito;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.inlinePara {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+}
+
+.aboutImg {
+  height: 30rem;
+  width: 30rem;
+}
+
+.linkedInCont {
+  background-color: inherit;
+  border: 2px solid #25282b;
+  margin-left: 1.2rem;
+}
+
+.cardHolder {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8rem;
+}
+
+.dummyHeight {
+  height: 5rem;
+}
+
+.contactFooter {
+  width: 100%;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8rem;
+
+  /* background-color: red; */
+}
+
+.contactIcons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  /* background-color: green; */
+}
+
+.emailIcon {
+  width: 4.8rem;
+  height: 4.8rem;
+  /* background-color: aqua; */
+}
+
+.linkedInIcon {
+  margin-left: 2.4rem;
+  width: 4.8rem;
+  height: 4.8rem;
+  /* background-color: blueviolet; */
+}
+
+.contactName {
+  margin-top: 3.2rem;
+}
+
+.nameStyle {
+  color: #828282;
+  font-family: Nunito;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media (max-width: 1280px) {
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 768px) {
+  .mainHeader {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .textContent {
+    margin-top: 10rem;
+    align-items: center;
+  }
+}
+
+@media (max-width: 640px) {
+}
+
+@media (max-width: 480px) {
+  .yellowBg {
+    overflow: hidden;
+    width: 100%;
+    height: 25rem;
+    z-index: 1;
+    align-self: center;
+  }
+}

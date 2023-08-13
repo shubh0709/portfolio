@@ -1,7 +1,8 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import selfImg from "../../../public/images/selfImg.png";
-import yellowBg from "../../../public/images/yellow-bg.png";
+import aboutImg from "../../../public/images/about-self-img.png";
+import emailIcon from "../../../public/svgs/email-icon.svg";
+import linkedinIcon from "../../../public/svgs/linkedin-icon.svg";
 import Button from "../components/button/button";
 
 export default function About() {
@@ -18,14 +19,32 @@ export default function About() {
             </p>
             <div className={styles.buttonContainer}>
               <Button text={"Resume"} />
-              <Button text={"LinkedIn"} contStyles={styles.linkedInCont} />
             </div>
           </div>
+
           <Image
-            src={yellowBg}
-            alt={"portrain image"}
-            className={styles.selfImg}
+            src={aboutImg}
+            alt={"portrait image"}
+            className={styles.aboutImg}
+            // fill={true}
           />
+        </div>
+        <div className={styles.contactFooter}>
+          <div className={styles.contactIcons}>
+            <Image
+              src={emailIcon}
+              alt={"email Icon"}
+              className={styles.emailIcon}
+            />
+            <Image
+              src={linkedinIcon}
+              alt={"linkedin Icon"}
+              className={styles.linkedInIcon}
+            />
+          </div>
+          <div className={styles.contactName}>
+            <p className={styles.nameStyle}>Shubham Singh</p>
+          </div>
         </div>
       </div>
     </main>

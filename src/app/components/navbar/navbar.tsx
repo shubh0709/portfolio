@@ -18,7 +18,7 @@ export default function Navbar() {
         <Image src={menuIcon} alt={"menu"} className={styles.menuIcon} />
         <Image src={close} alt={"close"} className={styles.closeIcon} />
       </div>
-      <div className={`${styles.navbar}`}>
+      <div className={styles.navbar}>
         <div
           className={`${styles.navOptions} ${showNav && styles.showNavOptions}`}
         >
