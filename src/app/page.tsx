@@ -19,6 +19,7 @@ import { openInNewTab, copyToClipboard } from "./utils/util";
 import Lottie from "lottie-react";
 import greenTick from "../../public/lotties/green-tick-lottie.json";
 import { useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 
 const resumeLink =
   "https://drive.google.com/file/d/1dx0PBYMU3irEHMComs72dWBGY7JuvJbP/view?usp=drive_link";
@@ -29,6 +30,21 @@ const emailLink = `mailto:${emailId}`;
 
 export default function Home() {
   const [textCopied, setTextCopied] = useState(false);
+
+  const notify = () =>
+    toast("copied 😉", {
+      style: {
+        fontFamily: "nunito",
+        color: "#25282b",
+        fontSize: "2.4rem",
+        fontStyle: "normal",
+        fontWeight: 500,
+        lineHeight: "150%",
+        borderStyle: "solid",
+        borderWidth: "1px",
+        borderColor: "#25282b",
+      },
+    });
 
   return (
     <main className={styles.main}>
@@ -134,6 +150,7 @@ export default function Home() {
               onClick={() => {
                 setTextCopied(true);
                 copyToClipboard(emailId);
+                notify();
               }}
             >
               <p className={styles.emailMe}>{"Email me at  "}</p>
@@ -146,6 +163,7 @@ export default function Home() {
                 <span className={styles.emailIdText}>
                   singhshubh0709@gmail.com
                 </span>
+                <Toaster position="bottom-right" reverseOrder={false} />
                 {textCopied ? (
                   <Lottie
                     animationData={greenTick}
