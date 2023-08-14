@@ -18,7 +18,7 @@ export default function About() {
               for the customers by pursuing engineering excellence
             </p>
             <div className={styles.buttonContainer}>
-              <Button text={"Resume"} />
+              {/* <Button text={"Resume"} /> */}
             </div>
           </div>
 
