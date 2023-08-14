@@ -9,7 +9,7 @@ import Button from "./components/button/button";
 import Card from "./components/card/card";
 import gullakIcon from "../../public/svgs/gullakLogo.svg";
 import gullakText from "../../public/svgs/gullak-text.svg";
-import factsetText from "../../public/svgs/factset-text.svg";
+import factsetText from "../../public/svgs/factSet-text.svg";
 import translearnText from "../../public/svgs/translearn-text.svg";
 import emailIcon from "../../public/svgs/email-icon.svg";
 import linkedinIcon from "../../public/svgs/linkedin-icon.svg";
