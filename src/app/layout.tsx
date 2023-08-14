@@ -1,6 +1,7 @@
+"use client";
 import "./globals.css";
 import type { Metadata } from "next";
-import Navbar from "./components/navbar/navbar";
+import inPageNav from "./components/navbar/inPageNav";
 import { Inter, Roboto, Poppins, Raleway, Nunito } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -20,11 +21,25 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.className} ${roboto.className} ${raleway.className} ${nunito.className}`}
-      >
-        {/* <Navbar /> */}
-        <div className="bodyContainer">{children}</div>
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+      </head>
+      <body className="animate__animated">
+        <>
+          <style jsx global>{`
+            :root {
+              --raleway-font: ${raleway.style.fontFamily};
+              --nunito-font: ${nunito.style.fontFamily};
+              --roboto-font: ${roboto.style.fontFamily};
+              --inter-font: ${inter.style.fontFamily};
+            }
+          `}</style>
+          {/* <Navbar /> */}
+          <div className="bodyContainer">{children}</div>
+        </>
       </body>
     </html>
   );

@@ -14,7 +14,7 @@ interface CardProps {
 
 export default function Card(props: CardProps) {
   return (
-    <div className={styles.cardCont}>
+    <div onClick={props.onPress} className={styles.cardCont}>
       {props.imgOnLeft && (
         <div
           className={`${styles.cardImgCont}`}
@@ -28,13 +28,13 @@ export default function Card(props: CardProps) {
 
           <Image
             src={props.imageText}
-            className={styles.cardImgText}
+            className={`${styles.cardImgText} ${props.textStyle}`}
             alt="project image"
           />
         </div>
       )}
       <div className={styles.cardContent}>
-        <p className={styles.projectName}>{"Project Name"}</p>
+        <p className={styles.projectName}>{"Description"}</p>
         <p className={styles.projectContent}>{props.workText}</p>
         <Button
           singleLine={true}
@@ -56,7 +56,7 @@ export default function Card(props: CardProps) {
           />
           <Image
             src={props.imageText}
-            className={styles.cardImgText}
+            className={`${styles.cardImgText} ${props.textStyle}`}
             alt="project image"
           />
         </div>

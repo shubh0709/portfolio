@@ -11,6 +11,7 @@
   display: flex;
   height: 100%;
   flex-direction: column;
+  align-items: center;
   font-size: 0.85rem;
   z-index: 2;
   flex: 1;
@@ -19,10 +20,11 @@
 }
 
 .mainHeader {
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
   /* background-color: #828282; */
 }
 
@@ -35,7 +37,7 @@
 
 .topTitle {
   color: #fdc435;
-  font-family: Nunito;
+  font-family: var(--nunito-font);
   font-size: 2rem;
   font-style: normal;
   font-weight: 700;
@@ -44,36 +46,42 @@
 }
 
 .title {
-  font-family: Raleway;
+  margin-top: 1.2rem;
+  font-family: var(--raleway-font);
   font-size: 4rem;
   font-weight: 700;
   font-style: normal;
   line-height: 120%;
+  animation-name: zoomIn; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
 }
 
 .subtitle {
+  margin-top: 3.2rem;
   color: #828282;
-  font-family: Nunito;
+  font-family: var(--nunito-font);
   font-size: 2.4rem;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
 }
 
-.imgWrapper {
+.imgWrapper :global {
   /* flex-grow: 1; */
   z-index: 5;
-  width: calc(0.7486 * 56rem);
-  height: 56rem;
-  transform: translateX(0%) translateY(-10%);
+  width: 46rem;
+  height: 46rem;
+  animation: zoomIn;
+  animation-duration: 2s;
+  /* transform: translateX(0%) translateY(-10%); */
   /* background-color: red; */
   /* overflow-x: hidden; */
 }
 
 .yellowBg {
   /* overflow-x: hidden; */
-  width: calc(0.7486 * 56rem);
-  height: 56rem;
+  width: 46rem;
+  height: 46rem;
   /* margin-left: 8rem; */
   z-index: 1;
 }
@@ -96,7 +104,7 @@
 .buttonContainer {
   display: flex;
   flex-direction: row;
-  margin-top: 2rem;
+  margin-top: 3.2rem;
 }
 
 .linkedInCont {
@@ -111,6 +119,11 @@
   flex-direction: column;
   align-items: center;
   margin-top: 8rem;
+}
+
+.translearnImgTextStyle {
+  width: 12rem;
+  height: 6rem;
 }
 
 .dummyHeight {
@@ -143,26 +156,38 @@
   margin-left: 2.4rem;
   width: 4.8rem;
   height: 4.8rem;
+  cursor: pointer;
   /* background-color: blueviolet; */
 }
 
 .linkedInIcon {
+  cursor: pointer;
   width: 4.8rem;
   height: 4.8rem;
   /* background-color: blueviolet; */
 }
 
 .emailIcon {
-  /* margin-left: 2.4rem; */
+  cursor: pointer;
+  margin-left: 2.4rem;
+  width: 4.8rem;
+  height: 4.8rem;
+  /* background-color: aqua; */
+}
+
+.emailIconSmall {
   width: 2.4rem;
   height: 2.4rem;
   /* background-color: aqua; */
 }
 
+.dummyHeight3 {
+  height: 3rem;
+}
+
 .contactName {
-  margin-top: 4rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   /* background-color: aqua; */
@@ -170,23 +195,67 @@
 
 .orKey {
   /* color: #828282; */
-  font-family: Nunito;
+  font-family: var(--nunito-font);
   font-size: 2rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
 
-.nameStyle {
-  padding-bottom: 0.5rem;
+.emailClipboardCont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
 
-  margin-left: 2rem;
+.emailMe {
   color: #828282;
-  font-family: Nunito;
+  font-family: var(--nunito-font);
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.nameStyle {
+  margin-top: 1rem;
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 0.1rem solid #25282b;
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: white;
+  /* padding-bottom: 0.5rem; */
+  color: #25282b;
+  font-family: var(--nunito-font);
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  /* background-color: #fdc435; */
+}
+
+.emailIdText {
+  color: #25282b;
+  font-family: var(--nunito-font);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  /* background-color: red; */
+  /* margin-bottom: 1rem; */
+}
+
+.clipboardIcon {
+  margin-left: 2rem;
+  cursor: pointer;
+  width: 2.4rem;
+  height: 2.4rem;
+  /* background-color: aqua; */
 }
 
 .footerContainer {
@@ -199,12 +268,21 @@
   height: 22rem;
 }
 
+/* @keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+} */
+
 @media (max-width: 1280px) {
   .imgWrapper {
     /* flex-grow: 1; */
     z-index: 5;
-    width: calc(0.7486 * 56rem);
-    height: 56rem;
+    width: 46rem;
+    height: 46rem;
     transform: translateX(0%) translateY(0%);
     /* background-color: red; */
     /* overflow-x: hidden; */
@@ -212,8 +290,8 @@
 
   .yellowBg {
     /* overflow-x: hidden; */
-    width: calc(0.7486 * 56rem);
-    height: 56rem;
+    width: 46rem;
+    height: 46rem;
     /* margin-left: 8rem; */
     z-index: 1;
   }
@@ -232,8 +310,8 @@
 
   /* .imgWrapper {
     z-index: 5;
-    width: calc(0.7486 * 56rem);
-    height: 56rem;
+    width: 46rem;
+    height: 46rem;
     overflow-x: visible;
     align-self: center;
   }
@@ -243,8 +321,8 @@
     margin-left: auto;
     margin-right: auto;
     overflow-x: hidden;
-    width: calc(0.7486 * 56rem);
-    height: 562rem;
+    width: 46rem;
+    height: 46rem;
     margin-top: 4rem;
     z-index: 1;
     align-self: center;
@@ -252,17 +330,44 @@
 }
 
 @media (max-width: 768px) {
+  .imgWrapper {
+    /* flex-grow: 1; */
+    z-index: 5;
+    width: 36rem;
+    height: 36rem;
+    transform: translateX(0%) translateY(0%);
+    /* background-color: red; */
+    /* overflow-x: hidden; */
+  }
+
+  .yellowBg {
+    /* overflow-x: hidden; */
+    width: 36rem;
+    height: 36rem;
+    /* margin-left: 8rem; */
+    z-index: 1;
+  }
 }
 
 @media (max-width: 640px) {
 }
 
 @media (max-width: 480px) {
+  .imgWrapper {
+    /* flex-grow: 1; */
+    z-index: 5;
+    width: 28rem;
+    height: 28rem;
+    transform: translateX(0%) translateY(0%);
+    /* background-color: red; */
+    /* overflow-x: hidden; */
+  }
+
   .yellowBg {
-    overflow: hidden;
-    width: 100%;
-    height: 25rem;
+    /* overflow-x: hidden; */
+    width: 28rem;
+    height: 28rem;
+    /* margin-left: 8rem; */
     z-index: 1;
-    align-self: center;
   }
 }

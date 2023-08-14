@@ -31,7 +31,7 @@
 
 .topTitle {
   color: #fdc435;
-  font-family: Nunito;
+  font-family: var(--nunito-font);
   font-size: 2rem;
   font-style: normal;
   font-weight: 700;
@@ -40,7 +40,7 @@
 }
 
 .title {
-  font-family: Raleway;
+  font-family: var(--raleway-font);
   font-size: 4rem;
   font-weight: 700;
   font-style: normal;
@@ -49,7 +49,7 @@
 
 .subtitle {
   color: #828282;
-  font-family: Nunito;
+  font-family: var(--nunito-font);
   font-size: 2.4rem;
   font-style: normal;
   font-weight: 400;
@@ -131,7 +131,7 @@
 
 .nameStyle {
   color: #828282;
-  font-family: Nunito;
+  font-family: var(--nunito-font);
   font-size: 16px;
   font-style: normal;
   font-weight: 400;

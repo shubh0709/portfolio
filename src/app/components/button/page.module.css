@@ -9,8 +9,12 @@
   align-self: flex-start;
 }
 
+.button:hover {
+  cursor: pointer;
+}
+
 .buttonText {
-  font-family: Roboto;
+  font-family: var(--roboto-font);
   font-size: 1.8rem;
   font-style: normal;
   font-weight: 500;

@@ -41,7 +41,7 @@
 
 .navtext {
   color: #25282b;
-  font-family: Raleway;
+  font-family: var(--raleway-font);
   font-size: 2rem;
   font-style: normal;
   font-weight: 500;
