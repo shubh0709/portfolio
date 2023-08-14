@@ -34,8 +34,10 @@ export default function Card(props: CardProps) {
         </div>
       )}
       <div className={styles.cardContent}>
-        <p className={styles.projectName}>{"Description"}</p>
-        <p className={styles.projectContent}>{props.workText}</p>
+        <div>
+          <p className={styles.projectName}>{"Description"}</p>
+          <p className={styles.projectContent}>{props.workText}</p>
+        </div>
         <Button
           singleLine={true}
           text={"View"}

@@ -45,12 +45,13 @@
   padding: 2rem 4.8rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 70%;
 }
 
 .projectContent {
+  margin-top: 1rem;
   color: #828282;
   font-family: var(--nunito-font);
   font-size: 1.6rem;
@@ -93,9 +94,9 @@
 }
 
 @media (max-width: 768px) {
-  .cardCont {
+  /* .cardCont {
     flex-direction: column;
-    width: 50%;
+    width: 70%;
     height: 45rem;
   }
 
@@ -104,24 +105,16 @@
   }
 
   .cardContent {
-    padding: 2rem 1rem;
+    padding: 2rem 1.6rem;
     height: 60%;
-  }
+  } */
 }
 
 @media (max-width: 640px) {
   .cardCont {
     flex-direction: column;
-    width: 50%;
+    width: 70%;
     height: 58rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .cardCont {
-    flex-direction: column;
-    width: 50%;
-    height: 63rem;
   }
 
   .cardImgCont {
@@ -129,7 +122,24 @@
   }
 
   .cardContent {
-    padding: 1rem 1rem;
+    padding: 2rem 1.6rem;
+    height: 60%;
+  }
+}
+
+@media (max-width: 480px) {
+  .cardCont {
+    flex-direction: column;
+    width: 90%;
+    height: 48rem;
+  }
+
+  .cardImgCont {
+    width: 100%;
+  }
+
+  .cardContent {
+    padding: 1.6rem 1.6rem;
     height: 75%;
   }
 }
@@ -137,15 +147,15 @@
 @media (max-width: 410px) {
   .cardCont {
     flex-direction: column;
-    width: 50%;
-    height: 66rem;
+    width: 90%;
+    height: 50rem;
   }
 }
 
 @media (max-width: 360px) {
   .cardCont {
     flex-direction: column;
-    width: 50%;
-    height: 70rem;
+    width: 87%;
+    height: 50rem;
   }
 }
