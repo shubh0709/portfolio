@@ -68,19 +68,19 @@
 }
 
 .resumeButton {
-  padding: 0.7rem 3rem;
+  padding: 0.9rem 3.2rem;
   text-transform: uppercase;
 }
 
 .resumeButtonText {
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   letter-spacing: 0.1rem;
 }
 
 .resumeButtonText:hover {
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 .resumeButton:hover {
@@ -405,5 +405,9 @@
     height: 28rem;
     /* margin-left: 8rem; */
     z-index: 1;
+  }
+
+  .resumeButton {
+    transform: scale(1.3);
   }
 }
