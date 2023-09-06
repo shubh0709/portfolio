@@ -1,9 +1,10 @@
 .main {
-  background-color: #e8ecf4;
+  background-color: #e8ecf4e4;
   display: flex;
   flex-direction: column;
   flex: 1;
   align-self: center;
+  max-width: 1440px;
 }
 
 .description {
@@ -36,7 +37,7 @@
 }
 
 .topTitle {
-  color: #fdc435;
+  color: #002753;
   font-family: var(--nunito-font);
   font-size: 2rem;
   font-style: normal;
@@ -60,16 +61,40 @@
   margin-top: 3.2rem;
   color: #828282;
   font-family: var(--nunito-font);
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
 }
 
+.resumeButton {
+  padding: 0.7rem 3rem;
+  text-transform: uppercase;
+}
+
+.resumeButtonText {
+  font-weight: 500;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+}
+
+.resumeButtonText:hover {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.resumeButton:hover {
+  cursor: pointer;
+  /* animation: zoomIn;
+  animation-duration: 1s; */
+  /* transition: 0.2s; */
+  border: none;
+}
+
 .imgWrapper :global {
   /* flex-grow: 1; */
   z-index: 5;
-  width: 46rem;
+  width: calc(0.9241 * 46rem);
   height: 46rem;
   animation: zoomIn;
   animation-duration: 2s;
@@ -80,7 +105,8 @@
 
 .yellowBg {
   /* overflow-x: hidden; */
-  width: 46rem;
+  width: calc(0.9241 * 46rem);
+
   height: 46rem;
   /* margin-left: 8rem; */
   z-index: 1;
@@ -121,9 +147,19 @@
   margin-top: 8rem;
 }
 
+.sihLogoStyle {
+  width: 5rem;
+  height: 6rem;
+}
+
 .translearnImgTextStyle {
   width: 12rem;
   height: 6rem;
+}
+
+.githubLogoStyle {
+  width: 5rem;
+  height: 5rem;
 }
 
 .dummyHeight {
@@ -154,24 +190,23 @@
 
 .twitterIcon {
   margin-left: 2.4rem;
-  width: 4.8rem;
-  height: 4.8rem;
-  cursor: pointer;
+  width: 3.84rem;
+  height: 3.84rem;
   /* background-color: blueviolet; */
 }
 
 .linkedInIcon {
   cursor: pointer;
-  width: 4.8rem;
-  height: 4.8rem;
+  width: 3.84rem;
+  height: 3.84rem;
   /* background-color: blueviolet; */
 }
 
 .emailIcon {
   cursor: pointer;
   margin-left: 2.4rem;
-  width: 4.8rem;
-  height: 4.8rem;
+  width: 3.84rem;
+  height: 3.84rem;
   /* background-color: aqua; */
 }
 
@@ -253,14 +288,14 @@
 .clipboardIcon {
   margin-left: 2rem;
   cursor: pointer;
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 1.92rem;
+  height: 1.92rem;
   /* background-color: aqua; */
 }
 
 .footerContainer {
   /* margin-top: 4rem; */
-  /* width: 100vw; */
+  width: 100%;
 }
 
 .footerImg {
@@ -281,7 +316,7 @@
   .imgWrapper {
     /* flex-grow: 1; */
     z-index: 5;
-    width: 46rem;
+    width: calc(0.9241 * 46rem);
     height: 46rem;
     transform: translateX(0%) translateY(0%);
     /* background-color: red; */
@@ -290,7 +325,7 @@
 
   .yellowBg {
     /* overflow-x: hidden; */
-    width: 46rem;
+    width: calc(0.9241 * 46rem);
     height: 46rem;
     /* margin-left: 8rem; */
     z-index: 1;
@@ -333,7 +368,7 @@
   .imgWrapper {
     /* flex-grow: 1; */
     z-index: 5;
-    width: 36rem;
+    width: calc(0.9241 * 36rem);
     height: 36rem;
     transform: translateX(0%) translateY(0%);
     /* background-color: red; */
@@ -342,7 +377,7 @@
 
   .yellowBg {
     /* overflow-x: hidden; */
-    width: 36rem;
+    width: calc(0.9241 * 36rem);
     height: 36rem;
     /* margin-left: 8rem; */
     z-index: 1;
@@ -356,7 +391,7 @@
   .imgWrapper {
     /* flex-grow: 1; */
     z-index: 5;
-    width: 28rem;
+    width: calc(0.9241 * 28rem);
     height: 28rem;
     transform: translateX(0%) translateY(0%);
     /* background-color: red; */
@@ -365,7 +400,8 @@
 
   .yellowBg {
     /* overflow-x: hidden; */
-    width: 28rem;
+    width: calc(0.9241 * 28rem);
+
     height: 28rem;
     /* margin-left: 8rem; */
     z-index: 1;

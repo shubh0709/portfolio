@@ -1,10 +1,13 @@
 import styles from "./page.module.css";
+import Image from "next/image";
 
 interface ButtonProps {
   text: string;
   textStyles?: any;
   contStyles?: any;
   singleLine?: boolean;
+  icon?: any;
+  iconStyle?: any;
   onPress: () => void;
 }
 
@@ -20,6 +23,9 @@ export default function Button(props: ButtonProps) {
         }`}
       >
         {props.text}
+        {props?.icon && (
+          <Image src={props.icon} alt="" className={props.iconStyle} />
+        )}
       </span>
     </button>
   );

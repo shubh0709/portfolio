@@ -10,7 +10,10 @@ import Card from "./components/card/card";
 import gullakIcon from "../../public/svgs/gullakLogo.svg";
 import gullakText from "../../public/svgs/gullak-text.svg";
 import factsetText from "../../public/svgs/factSet-text.svg";
-import translearnText from "../../public/svgs/translearn-text.svg";
+// import githubText from "../../public/svgs/github-text.svg";
+import githubText from "../../public/svgs/github-text-white.svg";
+// import translearnText from "../../public/svgs/translearn-text.svg";
+import translearnText from "../../public/svgs/translearn-text-blue.svg";
 import emailIcon from "../../public/svgs/email-icon.svg";
 import linkedinIcon from "../../public/svgs/linkedin-icon.svg";
 import twitterIcon from "../../public/svgs/twitter-icon.svg";
@@ -20,6 +23,9 @@ import Lottie from "lottie-react";
 import greenTick from "../../public/lotties/green-tick-lottie.json";
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
+import new_tab from "../../public/svgs/new_tab.svg";
+// import githubIcon from "../../public/svgs/github_blue_3.svg";
+import githubIcon from "../../public/svgs/github_black.svg";
 
 const resumeLink =
   "https://drive.google.com/file/d/1dx0PBYMU3irEHMComs72dWBGY7JuvJbP/view?usp=drive_link";
@@ -27,6 +33,8 @@ const linkedinLink = "https://www.linkedin.com/in/shubhamsingh0109/";
 const twitterLink = "https://twitter.com/imSsingh19";
 const emailId = "singhshubh0709@gmail.com";
 const emailLink = `mailto:${emailId}`;
+const server_linkAggregator =
+  "https://github.com/shubh0709/server-LinksAggregator";
 
 export default function Home() {
   const [textCopied, setTextCopied] = useState(false);
@@ -34,7 +42,7 @@ export default function Home() {
   const notify = () =>
     toast("copied 😉", {
       style: {
-        fontFamily: "nunito",
+        fontFamily: "--font-nunito",
         color: "#25282b",
         fontSize: "2.4rem",
         fontStyle: "normal",
@@ -63,6 +71,8 @@ export default function Home() {
               <Button
                 text={"Resume"}
                 onPress={() => openInNewTab(resumeLink)}
+                contStyles={styles.resumeButton}
+                textStyles={styles.resumeButtonText}
               />
               {/* <Button
                 text={"LinkedIn"}
@@ -96,21 +106,35 @@ export default function Home() {
             imgOnLeft={true}
             imageLogo={factsetLogo}
             imageText={factsetText}
-            imgBgColor={"#FBEAEB"}
+            imgBgColor={"#98caeb9c"}
             workText={
               "Factset is a US based firm providing financial data about companies.\nI worked here as a Fullstack engineer."
             }
             onPress={() => openInNewTab("https://www.factset.com/")}
           />
           <div className={styles.dummyHeight} />
+
+          <Card
+            imgOnLeft={true}
+            imageLogo={githubIcon}
+            imageText={githubText}
+            imgBgColor={"#292826"}
+            workText={
+              "Link-Aggregator: Unite the web's finest resources by sharing and upvoting links within categories. Curate knowledge together."
+            }
+            logoStyle={styles.githubLogoStyle}
+            onPress={() => openInNewTab(`${server_linkAggregator}`)}
+          />
+          <div className={styles.dummyHeight} />
           <Card
             imgOnLeft={true}
             imageLogo={sihLogo}
             imageText={translearnText}
-            imgBgColor={"#292826"}
+            imgBgColor={"#98caeb9c"}
             workText={
               "Teanslearn is a service built to cater students. It revolves around  summarizing text, generating PPT's, automatic question-answering based on the uploaded content"
             }
+            logoStyle={styles.sihLogoStyle}
             textStyle={styles.translearnImgTextStyle}
             onPress={() => openInNewTab("https://translearn.vercel.app/")}
           />
@@ -150,7 +174,7 @@ export default function Home() {
               onClick={() => {
                 setTextCopied(true);
                 copyToClipboard(emailId);
-                notify();
+                // notify();
               }}
             >
               <p className={styles.emailMe}>{"Email me at  "}</p>
@@ -189,13 +213,13 @@ export default function Home() {
           </span>
         </div>
       </div>
-      <div className={styles.footerContainer}>
+      {/* <div className={styles.footerContainer}>
         <Image
           src={footerImg}
           alt={"footer image"}
           className={styles.footerImg}
         />
-      </div>
+      </div> */}
     </main>
   );
 }

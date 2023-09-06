@@ -3,11 +3,25 @@ import "./globals.css";
 import type { Metadata } from "next";
 // import inPageNav from "./components/navbar/inPageNav";
 import { Inter, Roboto, Poppins, Raleway, Nunito } from "next/font/google";
+import footerImg from "../../public/images/footerImg.png";
+import Image from "next/image";
 
-const inter = Inter({ subsets: ["latin"] });
-const roboto = Roboto({ subsets: ["latin"], weight: "400" });
-const nunito = Nunito({ subsets: ["latin"] });
-const raleway = Raleway({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
+});
+const nunito = Nunito({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+});
+const raleway = Raleway({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
 
 // export const metadata: Metadata = {
 //   title: "Create Next App",
@@ -39,6 +53,9 @@ export default function RootLayout({
           `}</style>
           {/* <Navbar /> */}
           <div className="bodyContainer">{children}</div>
+          <div className="footerContainer">
+            <Image src={footerImg} alt={"footer image"} className="footerImg" />
+          </div>
         </>
       </body>
     </html>

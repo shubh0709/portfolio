@@ -1,6 +1,7 @@
 import Button from "../button/button";
 import styles from "./page.module.css";
 import Image from "next/image";
+import newTabIcon from "../../../../public/svgs/new_tab.svg";
 
 interface CardProps {
   imgOnLeft: boolean;
@@ -9,6 +10,7 @@ interface CardProps {
   imgBgColor: string;
   workText: string;
   textStyle?: any;
+  logoStyle?: any;
   onPress: () => void;
 }
 
@@ -18,11 +20,11 @@ export default function Card(props: CardProps) {
       {props.imgOnLeft && (
         <div
           className={`${styles.cardImgCont}`}
-          style={{ ["background-color" as any]: `${props.imgBgColor}` }}
+          style={{ ["backgroundColor" as any]: `${props.imgBgColor}` }}
         >
           <Image
             src={props.imageLogo}
-            className={styles.cardImgLogo}
+            className={`${styles.cardImgLogo} ${props.logoStyle}`}
             alt="project image"
           />
 
@@ -44,12 +46,14 @@ export default function Card(props: CardProps) {
           contStyles={styles.viewProjectButton}
           textStyles={styles.viewProjectButtonText}
           onPress={props.onPress}
+          icon={newTabIcon}
+          iconStyle={styles.newTabIcon}
         />
       </div>
       {!props.imgOnLeft && (
         <div
           className={`${styles.cardImgCont}`}
-          style={{ ["background-color" as any]: `${props.imgBgColor}` }}
+          style={{ ["backgroundColor" as any]: `${props.imgBgColor}` }}
         >
           <Image
             src={props.imageLogo}
