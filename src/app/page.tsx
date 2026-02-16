@@ -9,6 +9,8 @@ import Button from "./components/button/button";
 import Card from "./components/card/card";
 import gullakIcon from "../../public/svgs/gullakLogo.svg";
 import gullakText from "../../public/svgs/gullak-text.svg";
+import certifyIcon from "../../public/svgs/certify-logo.svg";
+import certifyText from "../../public/svgs/certify-text.svg";
 import factsetText from "../../public/svgs/factSet-text.svg";
 // import githubText from "../../public/svgs/github-text.svg";
 import githubText from "../../public/svgs/github-text-white.svg";
@@ -86,11 +88,22 @@ export default function Home() {
               src={combinedImg}
               alt={"portrait image"}
               className={styles.yellowBg}
-              // fill={true}
+            // fill={true}
             />
           </div>
         </div>
         <div className={styles.cardHolder}>
+          <Card
+            imgOnLeft={true}
+            imageLogo={certifyIcon}
+            imageText={certifyText}
+            imgBgColor={"#98caeb9c"}
+            workText={
+              "CertifyOS is a provider data management platform for the healthcare industry."
+            }
+            onPress={() => openInNewTab("https://www.certifyos.com/")}
+          />
+          <div className={styles.dummyHeight} />
           <Card
             imgOnLeft={true}
             imageLogo={gullakIcon}
