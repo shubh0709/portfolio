@@ -25,8 +25,6 @@ import { openInNewTab, copyToClipboard } from "./utils/util";
 import Lottie from "lottie-react";
 import greenTick from "../../public/lotties/green-tick-lottie.json";
 import { useState } from "react";
-import toast from "react-hot-toast";
-
 const Toaster = dynamic(
   () => import("react-hot-toast").then((mod) => mod.Toaster),
   { ssr: false }
@@ -47,7 +45,8 @@ const server_linkAggregator =
 export default function Home() {
   const [textCopied, setTextCopied] = useState(false);
 
-  const notify = () =>
+  const notify = async () => {
+    const { default: toast } = await import("react-hot-toast");
     toast("copied 😉", {
       style: {
         fontFamily: "--font-nunito",
@@ -61,6 +60,7 @@ export default function Home() {
         borderColor: "#25282b",
       },
     });
+  };
 
   return (
     <main className={styles.main}>
