@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import styles from "./page.module.css";
 import combinedImg from "../../public/images/combined-bg-self-img-2.png";
 import footerImg from "../../public/images/footerImg.png";
@@ -24,7 +25,12 @@ import { openInNewTab, copyToClipboard } from "./utils/util";
 import Lottie from "lottie-react";
 import greenTick from "../../public/lotties/green-tick-lottie.json";
 import { useState } from "react";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
+
+const Toaster = dynamic(
+  () => import("react-hot-toast").then((mod) => mod.Toaster),
+  { ssr: false }
+);
 import new_tab from "../../public/svgs/new_tab.svg";
 // import githubIcon from "../../public/svgs/github_blue_3.svg";
 import githubIcon from "../../public/svgs/github_black.svg";
