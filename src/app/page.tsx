@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import dynamic from "next/dynamic";
 import styles from "./page.module.css";
 import combinedImg from "../../public/images/combined-bg-self-img-2.png";
 import footerImg from "../../public/images/footerImg.png";
@@ -25,10 +24,6 @@ import { openInNewTab, copyToClipboard } from "./utils/util";
 import Lottie from "lottie-react";
 import greenTick from "../../public/lotties/green-tick-lottie.json";
 import { useState } from "react";
-const Toaster = dynamic(
-  () => import("react-hot-toast").then((mod) => mod.Toaster),
-  { ssr: false }
-);
 import new_tab from "../../public/svgs/new_tab.svg";
 // import githubIcon from "../../public/svgs/github_blue_3.svg";
 import githubIcon from "../../public/svgs/github_black.svg";
@@ -45,22 +40,6 @@ const server_linkAggregator =
 export default function Home() {
   const [textCopied, setTextCopied] = useState(false);
 
-  const notify = async () => {
-    const { default: toast } = await import("react-hot-toast");
-    toast("copied 😉", {
-      style: {
-        fontFamily: "--font-nunito",
-        color: "#25282b",
-        fontSize: "2.4rem",
-        fontStyle: "normal",
-        fontWeight: 500,
-        lineHeight: "150%",
-        borderStyle: "solid",
-        borderWidth: "1px",
-        borderColor: "#25282b",
-      },
-    });
-  };
 
   return (
     <main className={styles.main}>
@@ -206,7 +185,6 @@ export default function Home() {
                 <span className={styles.emailIdText}>
                   singhshubh0709@gmail.com
                 </span>
-                <Toaster position="bottom-right" reverseOrder={false} />
                 {textCopied ? (
                   <Lottie
                     animationData={greenTick}
